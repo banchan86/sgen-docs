@@ -181,7 +181,7 @@ For value types, the generated code will render a [Nullable value type](https://
 For reference types, the generated code will not render a nullable type since reference types are already nullable in C#. A consumer can test for `null` to determine if the value is present by simply using an `ExpressionTransform` operator with `it == null`.:
 
 :::workflow
-![Nullable pet](../workflows/person-and-pets-enum-nullable.bonsai)
+![Nullable pet](../workflows/person-and-pet-enum-nullable.bonsai)
 :::
 
 ## Required fields
