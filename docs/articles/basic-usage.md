@@ -33,7 +33,7 @@ dotnet bonsai.sgen --schema docs/workflows/person.json --output docs/workflows/E
 Finally, we can use the generated code in our Bonsai workflow:
 
 :::workflow
-![Person as BonsaiSgen](~/workflows/person-example-bonsai-sgen.bonsai)
+![Person as BonsaiSgen](../workflows/person-example-bonsai-sgen.bonsai)
 :::
 
 As you can probably tell, the `Bonsai.Sgen` approach is much more concise and less error-prone than the previous ones. It allows you to focus on the data structure itself and not on the boilerplate code required to create it in Bonsai. Moreover, as we will see later, the tool also automatically generates serialization and deserialization boilerplate code for the object, which can be very useful when working with external data sources.
@@ -83,7 +83,7 @@ dotnet bonsai.sgen --schema docs/workflows/person_and_dog.json --output docs/wor
 ```
 
 :::workflow
-![PersonAndDog as BonsaiSgen](~/workflows/person-and-dog-example-bonsai-sgen.bonsai)
+![PersonAndDog as BonsaiSgen](../workflows/person-and-dog-example-bonsai-sgen.bonsai)
 :::
 
 A few things worth noting in this example:
@@ -99,7 +99,7 @@ The previous example highlights the simplicity of generating Bonsai code for sim
 
 
 :::workflow
-![PersonAndDog building as BonsaiSgen](~/workflows/person-and-dog-nested-building-example-bonsai-sgen.bonsai)
+![PersonAndDog building as BonsaiSgen](../workflows/person-and-dog-example-nested-building-bonsai-sgen.bonsai)
 :::
 
 ## Enums
@@ -129,7 +129,7 @@ We can replace the `Pet` object in the previous example with an [`enum`](https:/
 In Bonsai, they can be manipulated as [`Enum`](https://learn.microsoft.com/en-us/dotnet/api/system.enum?view=net-9.0) types:
 
 :::workflow
-![Person and Pets](~/workflows/person-and-pet-enum.bonsai)
+![Person and Pets](../workflows/person-and-pet-enum.bonsai)
 :::
 
 > [!TIP]
@@ -160,7 +160,7 @@ In Bonsai, they can be manipulated as [`Enum`](https://learn.microsoft.com/en-us
 `json-schema` `array`s will be rendered as [`List<T>`](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-9.0) in the generated code and can be manipulated (and created) as such.
 
 :::workflow
-![Person and Pets](~/workflows/person-and-pets-enum.bonsai)
+![Person and Pets](../workflows/person-and-pets-enum.bonsai)
 :::
 
 ## Nullable types
@@ -181,7 +181,7 @@ For value types, the generated code will render a [Nullable value type](https://
 For reference types, the generated code will not render a nullable type since reference types are already nullable in C#. A consumer can test for `null` to determine if the value is present by simply using an `ExpressionTransform` operator with `it == null`.:
 
 :::workflow
-![Nullable pet](~/workflows/person-and-pets-enum-nullable.bonsai)
+![Nullable pet](../workflows/person-and-pets-enum-nullable.bonsai)
 :::
 
 ## Required fields
@@ -208,7 +208,7 @@ The two operations are afforded via the `SerializeToYaml` (or `SerializeToJson`)
 `DeserializeFromYaml` will take a `string` and return a `T` object. If validation fails, the operator will throw an exception.
 
 :::workflow
-![(de)serialization](~/workflows/serialization-example.bonsai)
+![(de)serialization](../workflows/serialization-example.bonsai)
 :::
 
 > [!Tip]
