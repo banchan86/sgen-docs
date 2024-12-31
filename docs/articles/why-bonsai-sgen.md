@@ -1,5 +1,6 @@
 ---
 uid: why-bonsai-sgen
+title: "Motivation"
 ---
 
 ## Why should I care?

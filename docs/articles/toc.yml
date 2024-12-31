@@ -1,4 +1,4 @@
-- name: Introduction
-  href: introduction.md
-- name: Getting Started
-  href: getting-started.md
+- href: ../index.md                         
+- href: why-bonsai-sgen.md              
+- href: basic-usage.md                    
+- href: advanced-usage.md

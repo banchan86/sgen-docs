@@ -1,7 +1,7 @@
 ---
 uid: basic-usage
+title: "Basic Usage"
 ---
-
 
 ## Automatic generation of Bonsai code using Bonsai.Sgen
 
